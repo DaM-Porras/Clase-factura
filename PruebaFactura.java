@@ -1,7 +1,7 @@
 public class PruebaFactura {
     public static void main(String[] args) {
         Factura factura1 = new Factura("1234", "Martillo", 2, 14.95);
-        Factura factura2 = new Factura("5678", "Pintura", -5, -9.99);
+        Factura factura2 = new Factura("6787", "Pintura", -5, -9.99);
 
         System.out.println("Factura inicial:");
         imprimirFactura(factura1);
@@ -11,10 +11,10 @@ public class PruebaFactura {
         factura1.establecerCantidad(3);
         factura1.establecerPrecioPorArticulo(7.50);
 
-        System.out.println("\nFactura despues de actualizar sus datos:");
+        System.out.println("\nFactura con datos actualizados:");
         imprimirFactura(factura1);
 
-        System.out.println("\nFactura creada con cantidad y precio invalidos:");
+        System.out.println("\nFactura creada con cantidad y precio invalidos (negativos):");
         imprimirFactura(factura2);
     }
 
