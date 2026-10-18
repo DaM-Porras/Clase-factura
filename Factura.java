@@ -8,8 +8,8 @@ public class Factura {
                    int cantidad, double precioPorArticulo) {
         this.numeroPieza = numeroPieza;
         this.descripcionPieza = descripcionPieza;
-        this.cantidad = cantidad;
-        this.precioPorArticulo = precioPorArticulo;
+        establecerCantidad(cantidad);
+        establecerPrecioPorArticulo(precioPorArticulo);
     }
 
     public void establecerNumeroPieza(String numeroPieza) {
@@ -29,7 +29,7 @@ public class Factura {
     }
 
     public void establecerCantidad(int cantidad) {
-        this.cantidad = cantidad;
+        this.cantidad = cantidad > 0 ? cantidad : 0;
     }
 
     public int obtenerCantidad() {
@@ -37,10 +37,14 @@ public class Factura {
     }
 
     public void establecerPrecioPorArticulo(double precioPorArticulo) {
-        this.precioPorArticulo = precioPorArticulo;
+        this.precioPorArticulo = precioPorArticulo > 0.0 ? precioPorArticulo : 0.0;
     }
 
     public double obtenerPrecioPorArticulo() {
         return precioPorArticulo;
     }
-}
+
+    public double obtenerMontoFactura() {
+        return cantidad * precioPorArticulo;
+    }
+} 
