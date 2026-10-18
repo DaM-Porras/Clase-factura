@@ -11,4 +11,36 @@ public class Factura {
         this.cantidad = cantidad;
         this.precioPorArticulo = precioPorArticulo;
     }
+
+    public void establecerNumeroPieza(String numeroPieza) {
+        this.numeroPieza = numeroPieza;
+    }
+
+    public String obtenerNumeroPieza() {
+        return numeroPieza;
+    }
+
+    public void establecerDescripcionPieza(String descripcionPieza) {
+        this.descripcionPieza = descripcionPieza;
+    }
+
+    public String obtenerDescripcionPieza() {
+        return descripcionPieza;
+    }
+
+    public void establecerCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public int obtenerCantidad() {
+        return cantidad;
+    }
+
+    public void establecerPrecioPorArticulo(double precioPorArticulo) {
+        this.precioPorArticulo = precioPorArticulo;
+    }
+
+    public double obtenerPrecioPorArticulo() {
+        return precioPorArticulo;
+    }
 }
